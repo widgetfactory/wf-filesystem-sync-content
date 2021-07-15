@@ -16,7 +16,12 @@
 	</files>
   <config>
     <fields name="params">
-      <fieldset name="options"></fieldset>
+      <fieldset name="options">
+	  	<field name="published_only" type="radio" default="1" label="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY" description="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+	  </fieldset>
     </fields>
   </config>
 </extension>
