@@ -34,7 +34,7 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
         // search for attribute value allowing for folder names
         $word = $db->quote('%="' . $db->escape($before, true) . '%', false);
 
-        $query->select('id, introtext')->from('#__content')->where('introtext LIKE ' . $word . '');
+        $query->select('*')->from('#__content')->where('(' . $db->qn('introtext') . ' LIKE ' . $word . ') OR (' . $db->qn('fulltext') . ' LIKE ' . $word . ')');
         $db->setQuery($query);
 
         $rows = $db->loadObjectList();
@@ -42,7 +42,10 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
         $table = JTable::getInstance('Content', 'JTable');
 
         foreach ($rows as $row) {
+            // introtext
             $row->introtext = preg_replace('#\b(src|poster|url|srcset|data)="' . preg_quote($before, '#') . '([^"]*)"#', '$1="' . $after . '$2"', $row->introtext);
+            // fulltext
+            $row->fulltext = preg_replace('#\b(src|poster|url|srcset|data)="' . preg_quote($before, '#') . '([^"]*)"#', '$1="' . $after . '$2"', $row->fulltext);
 
             if ($table->load($row->id)) {
                 $table->introtext = $row->introtext;
