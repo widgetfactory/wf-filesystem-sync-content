@@ -10,6 +10,11 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
 {
     private function makeRelative($path)
     {
+        // check if this is a local path
+        if (strpos($path, JPATH_SITE) !== 0) {
+            return $path;
+        }
+        
         if (function_exists('mb_substr')) {
             $path = mb_substr($path, mb_strlen(JPATH_SITE));
         } else {
@@ -35,6 +40,7 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
         $word = $db->quote('%="' . $db->escape($before, true) . '%', false);
 
         $query->select('*')->from('#__content')->where('(' . $db->qn('introtext') . ' LIKE ' . $word . ') OR (' . $db->qn('fulltext') . ' LIKE ' . $word . ')');
+
         $db->setQuery($query);
 
         $rows = $db->loadObjectList();
