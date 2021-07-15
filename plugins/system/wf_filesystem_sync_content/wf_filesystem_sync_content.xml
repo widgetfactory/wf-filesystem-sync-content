@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system" method="upgrade">
+  <name>plg_system_wf_filesystem_sync_content</name>
+ <author>Widget Factory</author>
+	<creationDate>July 2021</creationDate>
+	<copyright>Copyright (C) 2021 Ryan Demmer. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@joomlacontenteditor.net</authorEmail>
+	<authorUrl>www.joomlacontenteditor.net</authorUrl>
+	<version>1.0.0</version>
+  <description>PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_XML_DESCRIPTION</description>
+  <files folder="plugins/system/wf_filesystem_sync_content">
+    <file plugin="wf_filesystem_sync_content">wf_filesystem_sync_content.php</file>
+  </files>
+  <languages folder="language/en-GB">
+    <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.ini</language>
+    <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.sys.ini</language>
+  </languages>
+
+  <config>
+    <fields name="params">
+      <fieldset name="options"></fieldset>
+    </fields>
+  </config>
+</extension>
