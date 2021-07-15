@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>info@joomlacontenteditor.net</authorEmail>
 	<authorUrl>www.joomlacontenteditor.net</authorUrl>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
   <description>PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_XML_DESCRIPTION</description>
   <files folder="plugins/system/wf_filesystem_sync_content">
 		<filename plugin="wf_filesystem_sync_content">wf_filesystem_sync_content.php</filename>
@@ -17,10 +17,10 @@
   <config>
     <fields name="params">
       <fieldset name="options">
-	  	<!--field name="published_only" type="radio" default="1" label="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY" description="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY_DESC" class="btn-group btn-group-yesno">
+	  	<field name="published_only" type="radio" default="1" label="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY" description="PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_PUBLISHED_ONLY_DESC" class="btn-group btn-group-yesno">
             <option value="1">JYES</option>
             <option value="0">JNO</option>
-        </field-->
+        </field>
 	  </fieldset>
     </fields>
   </config>
