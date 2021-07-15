@@ -42,7 +42,7 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
         $table = JTable::getInstance('Content', 'JTable');
 
         foreach ($rows as $row) {
-            $row->introtext = preg_replace('#(src|poster|url|srcset|data)="' . preg_quote($before, '#') . '([^"]*)"#', '$1="' . $after . '$2"', $row->introtext);
+            $row->introtext = preg_replace('#\b(src|poster|url|srcset|data)="' . preg_quote($before, '#') . '([^"]*)"#', '$1="' . $after . '$2"', $row->introtext);
 
             if ($table->load($row->id)) {
                 $table->introtext = $row->introtext;
