@@ -5,7 +5,7 @@ Updates urls in content when files and folders are renamed or moved using the JC
 Downloads are available in [Releases](https://github.com/widgetfactory/wf-filesystem-sync-content/releases/).
 
 ## Installation
-Install using the Joomla Extensions Installer
+Install using the Joomla Extensions Installer and enable after installation.
 
 https://docs.joomla.org/Installing_an_extension
 
