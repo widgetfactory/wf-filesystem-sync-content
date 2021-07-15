@@ -49,6 +49,8 @@ class PlgSystemWf_Filesystem_Sync_Content extends JPlugin
 
             if ($table->load($row->id)) {
                 $table->introtext = $row->introtext;
+                $table->fulltext = $row->fulltext;
+                $table->check();
                 $table->store();
             }
         }
