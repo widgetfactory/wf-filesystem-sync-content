@@ -14,11 +14,6 @@
 		<filename>index.html</filename>
 		<folder>language</folder>
 	</files>
-  <languages folder="language/en-GB">
-    <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.ini</language>
-    <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.sys.ini</language>
-  </languages>
-
   <config>
     <fields name="params">
       <fieldset name="options"></fieldset>
