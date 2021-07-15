@@ -10,9 +10,10 @@
 	<version>1.0.0</version>
   <description>PLG_SYSTEM_WF_FILESYSTEM_SYNC_CONTENT_XML_DESCRIPTION</description>
   <files folder="plugins/system/wf_filesystem_sync_content">
-    <file plugin="wf_filesystem_sync_content">wf_filesystem_sync_content.php</file>
-    <folder>language</folder>
-  </files>
+		<filename plugin="wf_filesystem_sync_content">wf_filesystem_sync_content.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
   <languages folder="language/en-GB">
     <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.ini</language>
     <language tag="en-GB">en-GB.plg_system_wf_filesystem_sync_content.sys.ini</language>
